@@ -1,5 +1,7 @@
 # Constituency-Locator
 
+Download the files and open the index.html file.
+
 Click on the run button to run the program. This will prompt you to allow access to your location. 
 
 If permission is given to access your location, you are provided with three results:
