@@ -64,7 +64,7 @@ function getLocation() {
                 var constituency = data.result[0].parliamentary_constituency;
                 postcode.innerHTML = "<p>Postcode: " + pc + "</p><p>Your constituency is: " + constituency + "</p>";       
                 } else {
-                    postcode.innerHTML = "<p>Address is not in the UK</p>";
+                    postcode.innerHTML = "<p>Error: Address is not in the UK</p>";
                 }
 
             })
