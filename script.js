@@ -59,10 +59,13 @@ function getLocation() {
         result.appendChild(postcode);
         $.get(encodeURI("https://api.postcodes.io/postcodes?lon=" + long + "&lat=" + lat))
             .done(function (data) {
+                if(data.result !== null) {
                 var pc = data.result[0].postcode;
                 var constituency = data.result[0].parliamentary_constituency;
-                postcode.innerHTML = "<p>Postcode: " + pc + "</p><p>Your constituency is: " + constituency + "</p>";
-                
+                postcode.innerHTML = "<p>Postcode: " + pc + "</p><p>Your constituency is: " + constituency + "</p>";       
+                } else {
+                    postcode.innerHTML = "<p>Address is not in the UK</p>";
+                }
 
             })
             .fail(function (error) {
